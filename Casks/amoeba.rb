@@ -13,15 +13,14 @@ cask "amoeba" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Amoeba.app"
   binary "#{appdir}/Amoeba.app/Contents/Resources/bin/amoeba"
 
   # Unsigned build: clear quarantine so Gatekeeper doesn't block first launch.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Amoeba.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Amoeba.app"]
   end
 
   zap trash: [

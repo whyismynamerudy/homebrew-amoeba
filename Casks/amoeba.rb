@@ -1,6 +1,6 @@
 cask "amoeba" do
-  version "0.1.2"
-  sha256 "17277069221adb565e49f2d39eae6a8ef12ada553bb9b87e42232dd7a2667132"
+  version "0.1.3"
+  sha256 "d0de08ab33b841f94bc73e14369c43a03abea43dd93816073e38de09a59482f2"
 
   url "https://github.com/whyismynamerudy/amoeba/releases/download/v#{version}/orca-macos-arm64.dmg"
   name "Amoeba"
@@ -11,6 +11,8 @@ cask "amoeba" do
     url :url
     strategy :github_latest
   end
+
+  auto_updates true
 
   depends_on arch: :arm64
   depends_on macos: :monterey

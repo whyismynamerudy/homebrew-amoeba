@@ -1,6 +1,6 @@
 cask "amoeba" do
-  version "0.1.1"
-  sha256 "586a6363a6045fcd86c39933bc1a8ef38e3b44e326efe7ad48ce7f4ed9297549"
+  version "0.1.2"
+  sha256 "17277069221adb565e49f2d39eae6a8ef12ada553bb9b87e42232dd7a2667132"
 
   url "https://github.com/whyismynamerudy/amoeba/releases/download/v#{version}/orca-macos-arm64.dmg"
   name "Amoeba"
